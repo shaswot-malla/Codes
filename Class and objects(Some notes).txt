@@ -1,0 +1,127 @@
+class Human:
+    def __init__(self, n, o):
+        self.name = n
+        self.occupation = o
+ 
+    def do_work(self):
+        if self.occupation == "tennis player":
+            print(self.name, "plays tennis")
+        elif self.occupation == "actor":
+            print(self.name, "shoots film")
+ 
+    def speaks(self):
+        print(self.name, "says how are you?")
+ 
+tom = Human("tom","actor")
+tom.do_work()
+tom.speaks()
+ 
+maria = Human("maria","tennis player")
+maria.do_work()
+maria.speaks()
+
+
+#Synatx
+#class Classname(object):
+#    def init__(self):
+#        self.variable_name = value
+#        self.variable_name = "value"
+#    def method_name(self)
+    
+
+
+ 
+#Synatx
+#object_name = class_name()
+#object_name = class_name(Arg)
+ 
+#Simple Example:
+#class Student:
+#    def test1(self):
+#        print("Classes and Objects Examples")
+#    def test2(self,a):
+#        Multiplication = a*10
+#        print("Multiplication =",Multiplication)
+#softwarica = Student()
+#softwarica.test1()
+#softwarica.test2(100)
+
+
+ 
+#Example-1:
+#class Mobile:
+#    def __init__(self):
+#        self.model = "nokia"
+#    def test(self):
+#        print("Model:", self.model)
+#nokia = Mobile()        #object_name == class_name == class_name(arg)
+#nokia.test()            #To call function ## obj_name.method_name() 
+#Mobile.test(nokia)       # OR we can use: To call function
+ 
+#Example-2:
+class Student:
+    '''Classes and objects examples'''        #doc_string
+    name = 'Ram'
+    id = 101
+    location = 'Kathamndu'
+    def __init__(self,name,id,location):
+        self.name = name
+        self.id = id
+        self.location = location
+        print('OK')
+    def StudentData(self):
+        print("Name:",self.name)
+        print("ID:",self.id)
+        print("Location:",self.location)
+ 
+object1 = Student('Shyam',102,"Lalitpur")
+object1.StudentData()
+ 
+object2 = Student('Hari',103,"Bhaktapur")
+object2.StudentData()
+ 
+print(Student.__doc__)       #Doc_String
+ 
+print(Student.name)         #Accessing default value
+print(Student.id)
+print(Student.location)
+
+
+###
+
+Methods in class 1. Instance Methods 2. Class Methods 3. Static Methods 
+ 
+ 
+1. Instance Method - Object related method - Methods accessing instance variable 
+ 
+2. Class Method - Methods accessing class level variable (static variable) - Decorator @classmethod must be used to define class method 
+ 
+3. Static Method - Decorator @staticmethod must be used to define class method. - Not accessing both instance variable and class level variable or static variables - Means not related to both object and class. - Utility methods 
+ 
+ 
+ Decorator:  A decorator is a design pattern in Python that allow a user to add new functionality to an existing object without modifying its structure.  Decorator are usually called before the definition of a function you want to decorate. 
+ 
+ 
+ 
+ Where we can declare instance variables: 
+ 
+1. Inside init method by using self. 2. Inside instance method by using self. 3. From outside of class by using object reference. 
+ 
+ How to access instance variables: 1. With-in class by using self 2. From outside of the class by using object references. 
+ 
+ How to delete instance variables: 1. With-in class:   del self.variablename 2. Outside class: del objectreference.variablename 
+ 
+ 
+ 
+ Where we can declare static variable 1. With-in the class directly but outside of any method. 2. Inside init method by using class name. 3. Inside instance method by using class name. 4. Inside class method by cls variable or class name. 5. Inside static method by using class name. 6. From outside of class by using class name. 
+ 
+ 
+ 
+ How to access static variables: - We can access static variables either by class name or by object reference. 
+ 
+With-in class: o Class name, self, cls Outside class: o Object reference, class name 
+ 
+ 
+ How to modify static variables: - With-in the class, we should use class name, cls variable - From outside of the class, class name 
+ 
+ How to delete static variables: - With-in the class  class name, cls variable - Outside class  Only classname 
